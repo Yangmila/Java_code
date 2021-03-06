@@ -1,28 +1,26 @@
-package homework;
+package homework.listnode;
 
 import java.util.Scanner;
-
-class ListNode{
-    public ListNode next;
-    int val;
-
-    public ListNode(int v){
-        val = v;
-    }
-
-    @Override
-    public String toString() {
-        return "{" + val +
-                "}";
-    }
-}
 
 public class Partition {
     public static ListNode createList(){
         ListNode a = new ListNode(1);
         ListNode b = new ListNode(3);
-        ListNode c = new ListNode(7);
+        ListNode c = new ListNode(4);
         ListNode d = new ListNode(5);
+        ListNode e = new ListNode(8);
+        a.next = b;
+        b.next = c;
+        c.next = d;
+        d.next = e;
+        return a;
+    }
+
+    public static ListNode createList2(){
+        ListNode a = new ListNode(2);
+        ListNode b = new ListNode(3);
+        ListNode c = new ListNode(5);
+        ListNode d = new ListNode(7);
         ListNode e = new ListNode(8);
         a.next = b;
         b.next = c;
