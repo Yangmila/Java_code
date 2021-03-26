@@ -158,14 +158,84 @@ public class MySort {
         }
     }
 
+    //归并排序
+    public static void mergeSort(int[] arr){
+        _mergeSort(arr,0,arr.length);
+    }
+
+    public static void _mergeSort(int[] arr,int left,int right){
+        if(right - left <= 1){
+            return;
+        }
+        int mid = (left + right) / 2;
+        _mergeSort(arr,left,mid);
+        _mergeSort(arr,mid,right);
+        merge(arr,left,mid,right);
+    }
+
+    public static void merge(int[] arr,int left,int mid,int right){
+        if(left >= right){
+            return;
+        }
+        int[] tmp = new int[right - left];
+        int tmpSize = 0;
+        int l = left;
+        int m = mid;
+
+        while(l < mid && m < right){
+            if(arr[l] <= arr[m]){
+                tmp[tmpSize] = arr[l];
+                tmpSize++;
+                l++;
+            }else{
+                tmp[tmpSize] = arr[m];
+                tmpSize++;
+                m++;
+            }
+        }
+
+        while(l < mid){
+            tmp[tmpSize] = arr[l];
+            tmpSize++;
+            l++;
+        }
+        while (m < right){
+            tmp[tmpSize] = arr[m];
+            tmpSize++;
+            m++;
+        }
+
+        for(int i = 0;i < tmp.length;i++){
+            arr[left + i] = tmp[i];
+        }
+    }
+
+    public static void mergeSortByLoop(int[] arr){
+        for(int gap = 1;gap < arr.length;gap *= 2){
+            for(int i = 0;i < arr.length;i += 2*gap){
+                int left = i;
+                int mid = i + gap;
+                if (mid >= arr.length) {
+                    mid = arr.length;
+                }
+                int right = i + 2 * gap;
+                if (right >= arr.length) {
+                    right = arr.length;
+                }
+                merge(arr, left, mid, right);
+            }
+        }
+    }
+
     public static void main(String[] args) {
         int[] arr = {9, 5, 2, 7, 3, 6, 8};
 //        insertSort(arr);
 //        shellSort(arr);
 //        selectSort(arr);
-        bubbleSort(arr);
+//        bubbleSort(arr);
 //        heapSort(arr);
 //        quickSort(arr);
+        mergeSort(arr);
         System.out.println(Arrays.toString(arr));
     }
 }
