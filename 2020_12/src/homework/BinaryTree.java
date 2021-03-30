@@ -1,6 +1,8 @@
 package homework;
 
 class Node{
+    public Node next;
+    public Node random;
     String val;
     Node left;
     Node right;
