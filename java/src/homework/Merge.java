@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class Merge {
     public static void main(String[] args) {
-        int[] A = { 1,4,6,8,9};
-        int[] B = { 2,3,5,7};
+        int[] A = {1,2,3};
+        int[] B = {2,5,6};
         merge(A,A.length,B,B.length);
     }
     public static void merge(int A[], int m, int B[], int n) {
