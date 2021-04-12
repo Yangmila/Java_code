@@ -13,10 +13,9 @@ public class Merge {
             return;
         }
 
-        for(int i = m;i < m + n;i++){
-            for(int j = 0;j < n;j++){
-                A[i] = B[j];
-            }
+        int k = m;
+        for(int j = 0;j<n;j++){
+            A[k++] = B[j];
         }
         Arrays.sort(A);
         for(int i = 0;i < A.length;i++){
