@@ -14,8 +14,8 @@ public class NiuNiu {
             }
             Arrays.sort(b);
             int sum = 0;
-            for (int i = n; i < (3 * n) - 1; i += 2) {
-                sum += b[i];
+            for (int i = 0; i < n; i++) {
+                sum += b[b.length - 2 * (i + 1)];
             }
             System.out.println(sum);
         }
