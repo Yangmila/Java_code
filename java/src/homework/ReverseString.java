@@ -1,5 +1,5 @@
 package homework;
-
+//字符串反转
 import java.util.Scanner;
 
 public class ReverseString {
@@ -19,4 +19,13 @@ public class ReverseString {
         }
         System.out.println(str.toString());
     }
+
+//    public static String reverse (String str) {
+//        char[] ans = str.toCharArray();
+//        String reverse = "";
+//        for (int i = ans.length - 1; i >= 0; i--) {
+//            reverse += ans[i];
+//        }
+//        return reverse;
+//    }
 }
