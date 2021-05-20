@@ -1,7 +1,5 @@
 package homework;
 //奇数位上都是奇数或者偶数位上都是偶数
-//链接：https://www.nowcoder.com/questionTerminal/b89b14a3b5a94e438b518311c5156366
-//来源：牛客网
 //
 //思路：
 //特殊判断：
