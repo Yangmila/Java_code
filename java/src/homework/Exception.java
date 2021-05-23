@@ -1,6 +1,6 @@
 package homework;
 
-public class Exception {
+public class Exception extends Throwable {
     public static void main(String[] args) {
             System.out.println(divide(10,0));
         }
