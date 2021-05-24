@@ -29,12 +29,12 @@ public class AmericanDay {
 
     // 感恩节（11月的第四个星期四）
     public static void thanks_giving_day(int year) {
-        System.out.println(year + "-09-" +  day_of_demand(year, 9, 1, 1));
+        System.out.printf("%d-11-%02d\n", year, day_of_demand(year, 11, 4, 4));
     }
 
     // 劳动节（9月的第一个星期一）
     public static void labor_day(int year) {
-        System.out.println(year + "-09-" + day_of_demand(year, 9, 1, 1));
+        System.out.printf("%d-09-%02d\n", year, day_of_demand(year, 9, 1, 1));
     }
 
     // 国庆
@@ -48,17 +48,17 @@ public class AmericanDay {
         int week = day_of_week(year, 6, 1);
         // 星期一的话，从 31 号往前数 6 天，否则，数 week - 2 天
         int day = 31 - ((week == 1) ? 6 : (week - 2));
-        System.out.println(year + "-05-" + day);
+        System.out.printf("%d-05-%02d\n", year, day);
     }
 
     // 总统日（2月的第三个星期一）
     public static void president_day(int year) {
-        System.out.println(year + "-02-" + day_of_demand(year, 2, 3, 1));
+        System.out.printf("%d-02-%02d\n", year, day_of_demand(year, 2, 3, 1));
     }
 
     // 马丁·路德·金纪念日（1月的第三个星期一）
     public static void martin_luther_king_day(int year) {
-        System.out.println(year + "-01-" + day_of_demand(year, 1, 3, 1));
+        System.out. printf("%d-01-%02d\n", year, day_of_demand(year, 1, 3, 1));
     }
 
     // 给定年月和第几周的星期几，求出是该月的几号几号
