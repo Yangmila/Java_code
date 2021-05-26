@@ -1,0 +1,15 @@
+
+公众号官网：cyouagain.cn
+
+热文推荐：gzh.cyouagain.cn
+
+
+系统名称：高校寝室管理系统
+开发工具：eclipse
+开发语言：Java+Spring+SpringMVC+Mybatis+VUE
+数据库：MySql
+tomcat端口：8080
+
+访问地址：http://localhost:8080/dormManage/
+
+系统源码来自公众号【C you again】，关注获取更多IT资源。
