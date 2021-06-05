@@ -23,17 +23,19 @@ public class LuckyBags {
     public static int find(int[] x,int index,long sum,long mutil){
         int count = 0;
         for(int i = index;i < x.length;i++){
-            sum += x[i];
-            mutil *= x[i];
+            sum += x[i];//求和
+            mutil *= x[i];//求积
             if(sum > mutil){
-                count += 1 + find(x,i + 1,sum,mutil);
-            }else if(x[i] == 1){
+                count += 1 + find(x,i + 1,sum,mutil);//继续遍历下一个数
+            }else if(x[i] == 1){//若arr[i]=1，1和任何数的和>1和任何数的积
                 count += find(x,i + 1,sum,mutil);
             }else{
-                break;
+                break;//说明不构成幸运，直接break
             }
+            //回溯
             sum -= x[i];
             mutil /= x[i];
+            //因为相同的无区别，跳过重复的号码
             while(i < x.length - 1 && x[i] == x[i + 1]){
                 i++;
             }
